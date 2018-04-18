@@ -1,0 +1,343 @@
+﻿<Activity mc:Ignorable="sap sap2010 sads" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="Main_1"
+ xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities"
+ xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+ xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities"
+ xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger"
+ xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation"
+ xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation"
+ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
+ xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib"
+ xmlns:ui="http://schemas.uipath.com/workflow/activities"
+ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.Core</AssemblyReference>
+      <AssemblyReference>UiPath.Core.Activities</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Recording Sequence">
+    <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Type into 'editable text'" EmptyField="True" SendWindowMessages="False" SimulateType="False" Text="UiPath Training">
+      <ui:TypeInto.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="b91234555cac34bb879cb8760d6b1af4" Selector="&lt;wnd app='notepad.exe' cls='Notepad' title='Untitled - Notepad' /&gt;&lt;wnd cls='Edit' /&gt;&lt;ctrl role='editable text' /&gt;" WaitForReady="INTERACTIVE" />
+      </ui:TypeInto.Target>
+      <sap2010:WorkflowViewState.IdRef>TypeInto_7</sap2010:WorkflowViewState.IdRef>
+    </ui:TypeInto>
+    <ui:AnchorBase AnchorPosition="Top">
+      <ui:AnchorBase.Action>
+        <ActivityAction x:TypeArguments="ui:Anchor">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="ui:Anchor" Name="ContextAnchor" />
+          </ActivityAction.Argument>
+          <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Action Click 'menu item  Format'" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+            <ui:Click.CursorPosition>
+              <ui:CursorPosition OffsetX="30" OffsetY="9" Position="TopLeft" />
+            </ui:Click.CursorPosition>
+            <ui:Click.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="c697b0e34e6a995331f8bc13ca024a77" Selector="&lt;ctrl role='menu item' /&gt;" WaitForReady="INTERACTIVE" />
+            </ui:Click.Target>
+          </ui:Click>
+        </ActivityAction>
+      </ui:AnchorBase.Action>
+      <ui:AnchorBase.AnchorProvider>
+        <ui:WaitUiElementAppear FoundElement="{x:Null}" DisplayName="Anchor Find Element 'menu item  Format'" WaitActive="False" WaitVisible="False">
+          <ui:WaitUiElementAppear.Target>
+            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="c697b0e34e6a995331f8bc13ca024a77" Selector="&lt;wnd app='notepad.exe' cls='Notepad' title='Untitled - Notepad' /&gt;&lt;ctrl automationid='MenuBar' idx='1' name='Application' role='menu bar' /&gt;&lt;ctrl name='Format' role='menu item' /&gt;" WaitForReady="INTERACTIVE" />
+          </ui:WaitUiElementAppear.Target>
+        </ui:WaitUiElementAppear>
+      </ui:AnchorBase.AnchorProvider>
+      <sap2010:WorkflowViewState.IdRef>AnchorBase_5</sap2010:WorkflowViewState.IdRef>
+    </ui:AnchorBase>
+    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'menu item  Font...'" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+      <ui:Click.CursorPosition>
+        <ui:CursorPosition OffsetX="83" OffsetY="9" Position="TopLeft" />
+      </ui:Click.CursorPosition>
+      <ui:Click.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="fa071e1119defc6f8dabe97c0b80cf09" Selector="&lt;wnd app='notepad.exe' cls='#32768' /&gt;&lt;ctrl name='Format' role='popup menu' /&gt;&lt;ctrl automationid='33' /&gt;" WaitForReady="INTERACTIVE" />
+      </ui:Click.Target>
+      <sap2010:WorkflowViewState.IdRef>Click_17</sap2010:WorkflowViewState.IdRef>
+    </ui:Click>
+    <ui:SelectItem ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Select item 'list  Font:'" Item="Cooper">
+      <ui:SelectItem.Items>
+        <scg:List x:TypeArguments="x:String" Capacity="256">
+          <x:String>Agency FB</x:String>
+          <x:String>Algerian</x:String>
+          <x:String>Arial</x:String>
+          <x:String>Arial Rounded MT</x:String>
+          <x:String>Arial Unicode MS</x:String>
+          <x:String>Baskerville Old Face</x:String>
+          <x:String>Bauhaus 93</x:String>
+          <x:String>Bell MT</x:String>
+          <x:String>Berlin Sans FB</x:String>
+          <x:String>Bernard MT</x:String>
+          <x:String>Blackadder ITC</x:String>
+          <x:String>Bodoni MT</x:String>
+          <x:String>Bodoni MT Poster</x:String>
+          <x:String>Book Antiqua</x:String>
+          <x:String>Bookman Old Style</x:String>
+          <x:String>Bookshelf Symbol 7</x:String>
+          <x:String>Bradley Hand ITC</x:String>
+          <x:String>Britannic</x:String>
+          <x:String>Broadway</x:String>
+          <x:String>Brush Script MT</x:String>
+          <x:String>bz-bpmn-font</x:String>
+          <x:String>bz-modeler-font</x:String>
+          <x:String>Calibri</x:String>
+          <x:String>Californian FB</x:String>
+          <x:String>Calisto MT</x:String>
+          <x:String>Cambria</x:String>
+          <x:String>Cambria Math</x:String>
+          <x:String>Candara</x:String>
+          <x:String>Castellar</x:String>
+          <x:String>Centaur</x:String>
+          <x:String>Century</x:String>
+          <x:String>Century Gothic</x:String>
+          <x:String>Century Schoolbook</x:String>
+          <x:String>Chiller</x:String>
+          <x:String>Colonna MT</x:String>
+          <x:String>Comic Sans MS</x:String>
+          <x:String>Consolas</x:String>
+          <x:String>Constantia</x:String>
+          <x:String>Cooper</x:String>
+          <x:String>Copperplate Gothic</x:String>
+          <x:String>Corbel</x:String>
+          <x:String>Courier</x:String>
+          <x:String>Courier New</x:String>
+          <x:String>Curlz MT</x:String>
+          <x:String>Edwardian Script ITC</x:String>
+          <x:String>Elephant</x:String>
+          <x:String>Engravers MT</x:String>
+          <x:String>Eras ITC</x:String>
+          <x:String>EY Gothic</x:String>
+          <x:String>EY Gothic Comp</x:String>
+          <x:String>EY Gothic Comp Book</x:String>
+          <x:String>EY Tagline</x:String>
+          <x:String>EYInterstate</x:String>
+          <x:String>Felix Titling</x:String>
+          <x:String>Fixedsys</x:String>
+          <x:String>FontAwesome</x:String>
+          <x:String>Footlight MT</x:String>
+          <x:String>Forte</x:String>
+          <x:String>Franklin Gothic</x:String>
+          <x:String>Franklin Gothic Book</x:String>
+          <x:String>Freestyle Script</x:String>
+          <x:String>French Script MT</x:String>
+          <x:String>Gabriola</x:String>
+          <x:String>Garamond</x:String>
+          <x:String>Georgia</x:String>
+          <x:String>Gigi</x:String>
+          <x:String>Gill Sans</x:String>
+          <x:String>Gill Sans MT</x:String>
+          <x:String>Gloucester MT</x:String>
+          <x:String>GLYPHICONS Halflings</x:String>
+          <x:String>Goudy Old Style</x:String>
+          <x:String>Goudy Stout</x:String>
+          <x:String>Haettenschweiler</x:String>
+          <x:String>Harlow Solid</x:String>
+          <x:String>Harrington</x:String>
+          <x:String>High Tower Text</x:String>
+          <x:String>Impact</x:String>
+          <x:String>Imprint MT Shadow</x:String>
+          <x:String>Informal Roman</x:String>
+          <x:String>Jokerman</x:String>
+          <x:String>Juice ITC</x:String>
+          <x:String>Kristen ITC</x:String>
+          <x:String>Kunstler Script</x:String>
+          <x:String>Latin</x:String>
+          <x:String>Lucida Bright</x:String>
+          <x:String>Lucida Calligraphy</x:String>
+          <x:String>Lucida Console</x:String>
+          <x:String>Lucida Fax</x:String>
+          <x:String>Lucida Handwriting</x:String>
+          <x:String>Lucida Sans</x:String>
+          <x:String>Lucida Sans Typewriter</x:String>
+          <x:String>Lucida Sans Unicode</x:String>
+          <x:String>Magneto</x:String>
+          <x:String>Maiandra GD</x:String>
+          <x:String>Matura MT Script Capitals</x:String>
+          <x:String>Microsoft Sans Serif</x:String>
+          <x:String>Mistral</x:String>
+          <x:String>Modern</x:String>
+          <x:String>Modern No. 20</x:String>
+          <x:String>Monotype Corsiva</x:String>
+          <x:String>MS Outlook</x:String>
+          <x:String>MS Reference Sans Serif</x:String>
+          <x:String>MS Reference Specialty</x:String>
+          <x:String>MS Sans Serif</x:String>
+          <x:String>MS Serif</x:String>
+          <x:String>MT Extra</x:String>
+          <x:String>Niagara Engraved</x:String>
+          <x:String>Niagara Solid</x:String>
+          <x:String>OCR A</x:String>
+          <x:String>Old English Text MT</x:String>
+          <x:String>Onyx</x:String>
+          <x:String>Open Sans</x:String>
+          <x:String>Palace Script MT</x:String>
+          <x:String>Palatino Linotype</x:String>
+          <x:String>Papyrus</x:String>
+          <x:String>Parchment</x:String>
+          <x:String>Perpetua</x:String>
+          <x:String>Perpetua Titling MT</x:String>
+          <x:String>Playbill</x:String>
+          <x:String>Poor Richard</x:String>
+          <x:String>Pristina</x:String>
+          <x:String>Rage</x:String>
+          <x:String>Ravie</x:String>
+          <x:String>Rockwell</x:String>
+          <x:String>Roman</x:String>
+          <x:String>Script</x:String>
+          <x:String>Script MT</x:String>
+          <x:String>Segoe MDL2 Assets</x:String>
+          <x:String>Segoe Print</x:String>
+          <x:String>Segoe Script</x:String>
+          <x:String>Segoe UI</x:String>
+          <x:String>Segoe UI Emoji</x:String>
+          <x:String>Segoe UI Symbol</x:String>
+          <x:String>Showcard Gothic</x:String>
+          <x:String>Sitka Banner</x:String>
+          <x:String>Sitka Display</x:String>
+          <x:String>Sitka Heading</x:String>
+          <x:String>Sitka Small</x:String>
+          <x:String>Sitka Subheading</x:String>
+          <x:String>Sitka Text</x:String>
+          <x:String>Small Fonts</x:String>
+          <x:String>Snap ITC</x:String>
+          <x:String>Stencil</x:String>
+          <x:String>Symbol</x:String>
+          <x:String>System</x:String>
+          <x:String>Tahoma</x:String>
+          <x:String>Tempus Sans ITC</x:String>
+          <x:String>Terminal</x:String>
+          <x:String>Times New Roman</x:String>
+          <x:String>tinymce</x:String>
+          <x:String>tinymce-small</x:String>
+          <x:String>Trebuchet MS</x:String>
+          <x:String>Tw Cen MT</x:String>
+          <x:String>Verdana</x:String>
+          <x:String>Viner Hand ITC</x:String>
+          <x:String>Vivaldi</x:String>
+          <x:String>Vladimir Script</x:String>
+          <x:String>Webdings</x:String>
+          <x:String>Wingdings</x:String>
+          <x:String>Wingdings 2</x:String>
+          <x:String>Wingdings 3</x:String>
+        </scg:List>
+      </ui:SelectItem.Items>
+      <ui:SelectItem.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="4ac930cd60654f931a05cb772d89e116" Selector="&lt;wnd app='notepad.exe' cls='#32770' title='Font' /&gt;&lt;wnd ctrlid='1136' /&gt;&lt;wnd ctrlid='1000' /&gt;&lt;ctrl name='Font:' role='list' /&gt;" WaitForReady="INTERACTIVE" />
+      </ui:SelectItem.Target>
+    </ui:SelectItem>
+    <ui:SelectItem ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Select item 'list  Size:'" Item="18">
+      <ui:SelectItem.Items>
+        <scg:List x:TypeArguments="x:String" Capacity="16">
+          <x:String>8</x:String>
+          <x:String>9</x:String>
+          <x:String>10</x:String>
+          <x:String>11</x:String>
+          <x:String>12</x:String>
+          <x:String>14</x:String>
+          <x:String>16</x:String>
+          <x:String>18</x:String>
+          <x:String>20</x:String>
+          <x:String>22</x:String>
+          <x:String>24</x:String>
+          <x:String>26</x:String>
+          <x:String>28</x:String>
+          <x:String>36</x:String>
+          <x:String>48</x:String>
+          <x:String>72</x:String>
+        </scg:List>
+      </ui:SelectItem.Items>
+      <ui:SelectItem.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="f38174954803aef107b6f8123170b7f9" Selector="&lt;wnd app='notepad.exe' cls='#32770' title='Font' /&gt;&lt;wnd ctrlid='1138' /&gt;&lt;wnd ctrlid='1000' /&gt;&lt;ctrl name='Size:' role='list' /&gt;" WaitForReady="INTERACTIVE" />
+      </ui:SelectItem.Target>
+    </ui:SelectItem>
+    <ui:SelectItem ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Select item 'list  Size:'" Item="24">
+      <ui:SelectItem.Items>
+        <scg:List x:TypeArguments="x:String" Capacity="16">
+          <x:String>8</x:String>
+          <x:String>9</x:String>
+          <x:String>10</x:String>
+          <x:String>11</x:String>
+          <x:String>12</x:String>
+          <x:String>14</x:String>
+          <x:String>16</x:String>
+          <x:String>18</x:String>
+          <x:String>20</x:String>
+          <x:String>22</x:String>
+          <x:String>24</x:String>
+          <x:String>26</x:String>
+          <x:String>28</x:String>
+          <x:String>36</x:String>
+          <x:String>48</x:String>
+          <x:String>72</x:String>
+        </scg:List>
+      </ui:SelectItem.Items>
+      <ui:SelectItem.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="c1b5af5dd44b20c74492217c83aeb26c" Selector="&lt;wnd app='notepad.exe' cls='#32770' title='Font' /&gt;&lt;wnd ctrlid='1138' /&gt;&lt;wnd ctrlid='1000' /&gt;&lt;ctrl name='Size:' role='list' /&gt;" WaitForReady="INTERACTIVE" />
+      </ui:SelectItem.Target>
+    </ui:SelectItem>
+    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Button'" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+      <ui:Click.CursorPosition>
+        <ui:CursorPosition OffsetX="54" OffsetY="11" Position="TopLeft" />
+      </ui:Click.CursorPosition>
+      <ui:Click.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="1144702c2b17995a524c6dad6e735492" Selector="&lt;wnd app='notepad.exe' cls='#32770' title='Font' /&gt;&lt;wnd ctrlid='1' title='OK' /&gt;" WaitForReady="INTERACTIVE" />
+      </ui:Click.Target>
+    </ui:Click>
+    <sap2010:WorkflowViewState.IdRef>Sequence_22</sap2010:WorkflowViewState.IdRef>
+    <sads:DebugSymbol.Symbol>dzNDOlxVc2Vyc1xRWDQ1NVRCXERvY3VtZW50c1xVaVBhdGhcTm90ZXBhZFxNYWluLnhhbWwcOAPHAg4CAQE5BT4TAgEaPwVXFQIBE1gFYBACAQ9hBYoCFQIBDIsCBaMCFQIBCaQCBbwCFQIBBr0CBcQCEAIBAjuYATudAgIBHDnxATmCAgIBG1AJVCICARhFC0wWAgEUXZgBXZQCAgESWjFaNAIBEVokWigCARBhiQFhkQECAQ2IApgBiAKwAgIBDosCiQGLAo0BAgEKoQKYAaECsAICAQukAokBpAKNAQIBB7oCmAG6ArACAgEIwgKYAcIC9gECAQW/AjG/AjUCAQS/AiS/AigCAQNSnAFS4wICARlKngFKvwECARdHN0c6AgEWRypHLgIBFQ==</sads:DebugSymbol.Symbol>
+  </Sequence>
+  <sap2010:WorkflowViewState.ViewStateManager>
+    <sap2010:ViewStateManager>
+      <sap2010:ViewStateData Id="TypeInto_7" sap:VirtualizedContainerService.HintSize="322,134" />
+      <sap2010:ViewStateData Id="AnchorBase_5" sap:VirtualizedContainerService.HintSize="322,220" />
+      <sap2010:ViewStateData Id="Click_17" sap:VirtualizedContainerService.HintSize="322,106" />
+      <sap2010:ViewStateData Id="Sequence_22" sap:VirtualizedContainerService.HintSize="344,904">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Main_1" sap:VirtualizedContainerService.HintSize="384,984" />
+    </sap2010:ViewStateManager>
+  </sap2010:WorkflowViewState.ViewStateManager>
+</Activity>

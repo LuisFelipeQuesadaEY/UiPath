@@ -1,0 +1,14 @@
+{
+  "name": "Ejercicio 3 - File Manager",
+  "description": "Blank Project",
+  "main": "Main.xaml",
+  "dependencies": {},
+  "excludedData": [
+    "Private:*",
+    "*password*"
+  ],
+  "toolVersion": "17.1.6435.21855",
+  "projectVersion": "1.0.6572.14234",
+  "packOptions": {},
+  "runtimeOptions": {}
+}
